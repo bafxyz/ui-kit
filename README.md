@@ -1,4 +1,4 @@
-# ui sample project
+# ui kit storybook sample project
 
 ## Building and running on localhost
 
