@@ -1,0 +1,59 @@
+@media (min-width: 480px) {
+    :root {
+        --font-size: calc(1rem + ((1vw - 4.8px) * 0.1389));
+
+        // Inputs
+        --input-small: calc(0.625rem + ((1vw - 4.8px) * 0.1389));
+        --input-normal: calc(0.75rem + ((1vw - 4.8px) * 0.1389));
+        --input-large: calc(0.875rem + ((1vw - 4.8px) * 0.1389));
+    }
+}
+
+/* Prevent font scaling beyond this breakpoint */
+@media (min-width: 1920px) {
+    :root {
+        --font-size: 18px;
+
+        // Inputs
+        --input-small: 12;
+        --input-normal: 14;
+        --input-large: 20;
+    }
+}
+
+:root {
+    --s: 1px;
+
+    --screen-mobile: 375; // 375x667
+    --screen-tablet: 768; // 768x1024
+    --screen-desktop: 1920; // 1920x1080
+
+    --dim-gutter: calc(8 * 100vw / var(--screen-desktop));
+
+    // FONTS
+    --font-family: 'Poppins', sans-serif;
+
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    // COLORS
+    --color-dark: #000000;
+
+    --color-light: #ffffff;
+
+    // Gradients
+    --color-gradient-0: linear-gradient(350deg, #4048ef 0%, #5a7bef 100%);
+    --color-gradient-0-inverse: linear-gradient(350deg, #5a7bef 0%, #4048ef 100%);
+    --color-gradient-1: linear-gradient(350deg, #e83f94 0%, #f54e5e 100%);
+    --color-gradient-1-inverse: linear-gradient(350deg, #f54e5e 0%, #e83f94 100%);
+
+    // Shadows
+    --gradient-content-shadow: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+
+    // Dimensions
+    --site-width: calc(var(--screen-desktop) * 1px);
+}

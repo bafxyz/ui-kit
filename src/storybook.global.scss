@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400|Poppins:400');
+@import '../setup/core';
+
+html {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    line-height: 1.618;
+}
+
+body {
+    background-color: white;
+    color: #333;
+    overflow-x: hidden;
+}
+
+svg {
+    -webkit-backface-visibility: hidden;
+}
