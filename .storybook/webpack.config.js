@@ -7,6 +7,11 @@ module.exports = async ({ config, mode }) => ({
     module: { ...config.module, rules: [babelLoader(), sassLoader(), rawLoader()] },
     resolve: {
         ...config.resolve,
-        extensions: [...config.resolve.extensions, '.ts', '.tsx']
+        extensions: [...config.resolve.extensions, '.ts', '.tsx', 'raw.md'],
+        alias: {
+            ...config.resolve.alias,
+            '~': process.cwd() + '/src',
+            '@': process.cwd() + '/node_modules'
+        }
     }
 })
