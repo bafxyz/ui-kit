@@ -1,4 +1,4 @@
-import { EButtonScheme, EButtonState } from './types'
+import { EButtonVariant, EButtonState } from './types'
 
 export const sizes = {
     small: `
@@ -15,8 +15,8 @@ export const sizes = {
     `
 }
 
-export const schemes = {
-    [EButtonScheme.PRIMARY]: {
+export const variants = {
+    [EButtonVariant.PRIMARY]: {
         [EButtonState.DEFAULT]: `
             background: var(--color-gradient-0);
             color: var(--color-light);
@@ -36,7 +36,7 @@ export const schemes = {
             pointer-events: none;
         `
     },
-    [EButtonScheme.SECONDARY]: {
+    [EButtonVariant.SECONDARY]: {
         [EButtonState.DEFAULT]: `
             background: var(--color-gradient-1);
             color: var(--color-light);
@@ -51,6 +51,26 @@ export const schemes = {
         `,
         [EButtonState.DISABLED]: `
             background: var(--color-gradient-1);
+            color: var(--color-light);
+            opacity: 0.4;
+            pointer-events: none;
+        `
+    },
+    [EButtonVariant.TERTIARY]: {
+        [EButtonState.DEFAULT]: `
+            background: var(--color-gradient-2);
+            color: var(--color-light);
+
+            &:hover {
+                background: var(--color-gradient-2-inverse);
+            }
+        `,
+        [EButtonState.HOVER]: `
+            background: var(--color-gradient-2-inverse);
+            color: var(--color-light);
+        `,
+        [EButtonState.DISABLED]: `
+            background: var(--color-gradient-2);
             color: var(--color-light);
             opacity: 0.4;
             pointer-events: none;

@@ -6,10 +6,11 @@
 -   NORMAL
 -   LARGE
 
-## Scheme `UiButton.SCHEME`
+## Variants `UiButton.VARIANT`
 
 -   PRIMARY
 -   SECONDARY
+-   TERTIARY
 
 ## State `UiButton.STATE`
 

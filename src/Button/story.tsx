@@ -5,17 +5,17 @@ import { boolean, text, select } from '@storybook/addon-knobs'
 import UiButton from './index'
 import readme from './readme.raw.md'
 
-const Button = ({
+const ButtonStory = ({
     innerText = text('text', 'Button example'),
     size = select('size', UiButton.SIZE, UiButton.SIZE.NORMAL),
     fit = boolean('fit', false),
     radius = select('radius', UiButton.RADIUS, UiButton.RADIUS.DEFAULT),
-    scheme = select('scheme', UiButton.SCHEME, UiButton.SCHEME.PRIMARY),
+    variant = select('variant', UiButton.VARIANT, UiButton.VARIANT.PRIMARY),
     state = select('state', UiButton.STATE, UiButton.STATE.DEFAULT),
     textTransform = select('transform', UiButton.TEXT_TRANSFORM, UiButton.TEXT_TRANSFORM.NONE)
 }) => (
     <>
-        <UiButton size={size} state={state} scheme={scheme} radius={radius} fit={fit} textTransform={textTransform}>
+        <UiButton size={size} state={state} variant={variant} radius={radius} fit={fit} textTransform={textTransform}>
             {innerText}
         </UiButton>
     </>
@@ -27,4 +27,4 @@ const opts = {
 
 storiesOf('UI Components|UiButton', module)
     .addDecorator(storyFn => <div>{storyFn()}</div>)
-    .add('Example', () => <Button />, opts)
+    .add('Example', () => <ButtonStory />, opts)

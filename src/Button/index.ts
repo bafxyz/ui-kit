@@ -4,11 +4,11 @@ import IButton, {
     IButtonProps,
     EButtonTextTransform,
     EButtonSize,
-    EButtonScheme,
     EButtonState,
-    EButtonRadius
+    EButtonRadius,
+    EButtonVariant
 } from './types'
-import { schemes, sizes } from './variants'
+import { variants, sizes } from './variants'
 
 const UiButton: IButton = styled.button(
     ({
@@ -16,7 +16,7 @@ const UiButton: IButton = styled.button(
         nowrap,
         radius = EButtonRadius.DEFAULT,
         size = EButtonSize.NORMAL,
-        scheme = EButtonScheme.PRIMARY,
+        variant = EButtonVariant.PRIMARY,
         state = EButtonState.DEFAULT,
         textTransform = EButtonTextTransform.NONE
     }: IButtonProps) => `
@@ -27,7 +27,7 @@ const UiButton: IButton = styled.button(
         text-align: center;
         text-transform: ${textTransform};
         ${sizes[size]}
-        ${schemes[scheme][state]}
+        ${variants[variant][state]}
         ${radius ? `border-radius: ${radius};` : ''}
         ${nowrap ? `white-space: nowrap;` : ''}
         ${fit ? `display: block; width: 100%;` : ''}
@@ -36,8 +36,8 @@ const UiButton: IButton = styled.button(
 
 UiButton.RADIUS = EButtonRadius
 UiButton.SIZE = EButtonSize
-UiButton.SCHEME = EButtonScheme
 UiButton.STATE = EButtonState
 UiButton.TEXT_TRANSFORM = EButtonTextTransform
+UiButton.VARIANT = EButtonVariant
 
 export default UiButton

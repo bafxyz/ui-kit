@@ -21,9 +21,10 @@ export enum EButtonTextTransform {
     UPPERCASE = 'uppercase'
 }
 
-export enum EButtonScheme {
+export enum EButtonVariant {
     PRIMARY = 'primary',
-    SECONDARY = 'secondary'
+    SECONDARY = 'secondary',
+    TERTIARY = 'tertiary'
 }
 
 export interface IButtonProps {
@@ -32,14 +33,14 @@ export interface IButtonProps {
     nowrap?: boolean
     radius?: EButtonRadius | string
     round?: boolean
-    scheme?: EButtonScheme
     size?: EButtonSize
     state?: EButtonState
     textTransform?: EButtonTextTransform
+    variant?: EButtonVariant
 }
 
 export default interface IButton extends HTMLButtonElement {
-    SCHEME: typeof EButtonScheme
+    VARIANT: typeof EButtonVariant
     SIZE: typeof EButtonSize
     STATE: typeof EButtonState
     RADIUS: typeof EButtonRadius
