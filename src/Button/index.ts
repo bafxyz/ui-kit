@@ -10,7 +10,7 @@ import IButton, {
 } from './types'
 import { variants, sizes } from './variants'
 
-const UiButton: IButton = styled.button(
+const Button: IButton = styled.button(
     ({
         fit,
         nowrap,
@@ -34,10 +34,10 @@ const UiButton: IButton = styled.button(
 `
 )
 
-UiButton.RADIUS = EButtonRadius
-UiButton.SIZE = EButtonSize
-UiButton.STATE = EButtonState
-UiButton.TEXT_TRANSFORM = EButtonTextTransform
-UiButton.VARIANT = EButtonVariant
+Button.RADIUS = EButtonRadius
+Button.SIZE = EButtonSize
+Button.STATE = EButtonState
+Button.TEXT_TRANSFORM = EButtonTextTransform
+Button.VARIANT = EButtonVariant
 
-export default UiButton
+export default Button

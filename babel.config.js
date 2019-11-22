@@ -1,4 +1,4 @@
 module.exports = {
-    presets: ['@babel/preset-react', '@babel/preset-typescript', '@babel/preset-env'],
+    presets: ['@babel/preset-react', '@babel/preset-typescript', '@babel/preset-env', '@emotion/babel-preset-css-prop'],
     plugins: ['babel-plugin-macros', 'emotion']
 }

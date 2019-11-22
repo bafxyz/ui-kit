@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { boolean, text, select } from '@storybook/addon-knobs'
 
-import UiButton from './index'
+import { UiButton } from '~/index'
 import readme from './readme.raw.md'
 
 const ButtonStory = ({
