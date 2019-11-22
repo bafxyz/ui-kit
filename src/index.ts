@@ -1,5 +1,6 @@
 import UiBox from '~/Box'
 import UiButton from '~/Button'
-import UiGrid from '~/Grid'
+import UiText from '~/Text'
+import UiPortal from '~/Portal'
 
-export { UiBox, UiButton, UiGrid }
+export { UiPortal, UiBox, UiButton, UiText }
